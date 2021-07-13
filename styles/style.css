@@ -124,9 +124,9 @@ hr{
     font-size: 16px;
 }
 /* ------------------
-    cources style
+    courses style
 ------------------ */
-.cources{
+.courses{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 24px;
@@ -170,4 +170,45 @@ hr{
     border-radius: 10px;
     padding: 4px;
     font-size: 14px;
+}
+
+/* ---------------------
+    Media Queries
+--------------------- */
+/* Mobile Device */
+@media only screen and (max-width:688px) {
+    #nav-container{
+         width: 100%;
+    }
+    .nav-left span{
+        margin-left: 5px;
+    }
+    .nav-right ul li{
+        margin-left: 5px;
+    }
+    .container{
+        width: 100%;
+    }
+    .section-title{
+        text-align: center;
+    }
+    .players, .blogs, .courses{      
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .player{
+        flex-direction: column;
+    }
+    
+}
+/* Tablet Device */
+@media only screen and (min-width:668px) and (max-width:992px) {
+    #nav-container{
+        width: 100%;
+    }
+    .container{
+        width: 100%;
+    }
+    .players, .courses{
+        grid-template-columns: repeat(2, 1fr);        
+    }
 }
